@@ -22,7 +22,7 @@ Open the Unraid terminal: **Tools → Terminal** (the `>_` icon in the top-right
 mkdir -p /mnt/user/appdata/fp-tracker
 
 # Clone the repo into it
-git clone https://github.com/asaji/FP-tracker.git /mnt/user/appdata/fp-tracker
+git clone https://github.com/asaji/Flight-Price-Tracker.git /mnt/user/appdata/fp-tracker
 
 # Move into the directory
 cd /mnt/user/appdata/fp-tracker

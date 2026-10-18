@@ -25,8 +25,8 @@ A self-hosted flight price tracking app that runs perpetually as a Docker contai
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/asaji/FP-tracker.git
-cd FP-tracker
+git clone https://github.com/asaji/Flight-Price-Tracker.git
+cd Flight-Price-Tracker
 ```
 
 ### 2. Configure environment variables
@@ -62,7 +62,7 @@ Navigate to `http://localhost:7002` (or your server's IP).
    ```bash
    mkdir -p /mnt/user/appdata/fp-tracker
    cd /mnt/user/appdata/fp-tracker
-   git clone https://github.com/asaji/FP-tracker.git .
+   git clone https://github.com/asaji/Flight-Price-Tracker.git .
    ```
 3. Fill in Pushover credentials in `docker-compose.yml`
 4. Start the container:
@@ -152,3 +152,20 @@ Docker + volume mount      — persistent data at ./data/
 | Port | Service |
 |---|---|
 | `7002` | Web UI |
+
+---
+
+## Repository Structure
+
+```text
+.
+├── main.py                    # Entry point — starts Flask on 0.0.0.0:7002
+├── app/                       # Flask application, SQLite queries, scheduler & UI
+├── Dockerfile                 # Python 3.12 container definition
+├── docker-compose.yml         # Docker Compose stack & environment configuration
+├── UNRAID.md                  # Step-by-step Unraid setup guide
+├── CHANGELOG.md               # Dated log of changes & context for future LLMs
+├── AGENTS.md                  # Instructions & architecture context for AI agents
+└── CLAUDE.md                  # Claude Code entry point referencing AGENTS.md & CHANGELOG.md
+```
+
